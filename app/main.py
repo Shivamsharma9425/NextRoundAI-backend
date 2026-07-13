@@ -28,7 +28,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://your-frontend.vercel.app",  # replace later
+        "https://next-round-ai-frontend.vercel.app/",  # replace later
     ],
     allow_credentials=True,
     allow_methods=["*"],
