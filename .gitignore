@@ -82,3 +82,8 @@ dist/
 *.sqlite3
 *.db
 *.pem
+
+uploads/
+temp/
+temp_files/
+storage/
