@@ -139,14 +139,18 @@ async def upload_resume_route(
     
 @router.get("/my-resume")
 async def get_resume(
-    user=Depends(
-        get_current_user
-    )
+    user=Depends(get_current_user)
 ):
-
     resume = await get_resume_by_user(
         str(user["_id"])
     )
+
+    if not resume:
+        return None
+        # or raise HTTPException(
+        #     status_code=404,
+        #     detail="Resume not found."
+        # )
 
     resume["_id"] = str(resume["_id"])
     return resume
